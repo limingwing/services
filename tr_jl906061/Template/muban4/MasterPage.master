@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Template_muban4_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="Template/muban4/images/CN_home.css" rel="stylesheet" type="text/css" />
+<title><%=title%></title>
+<script type="text/javascript">
+    function $(id) { return document.getElementById(id); }
+    function cheklogin() {
+        if ($("u").value == "") {
+            alert("用户名不能为空!");
+            $("u").focus();
+            return false;
+        }
+        if ($("p").value == "") {
+            alert("密码不能为空!");
+            $("p").focus();
+            return false;
+        }
+        if ($("c").value == "") {
+            alert("验证码不能为空!");
+            $("c").focus();
+            return false;
+        }
+    }
+    function reset1() {
+        document.form1.reset();
+    }
+</script>
+</head>
+ <form id="form1" runat="server">
+<body>
+
+<div class="logintop-box">
+<div id="header">
+<div class="fl"><a href="#"><img src="Template/muban4/images/login.png" width="400" height="80" alt="logo" /></a></div>
+<!--<div class="fr"><a href="#">帮助中心</a></div>-->
+</div>
+
+</div>
+<div style=" padding-top:20px;"></div>
+<div class="login-bg">
+<div class="login-main">
+    <div id="main">
+    <div class="Article-box"></div>
+     <div class="Article-box2"></div>
+     <div class="Article-box3"></div>
+    <div class="Article-box4"></div>
+<div class="login-box">
+<div class="login-box-bg"></div>
+      <span class="systemlogo">会员登陆</span>
+      <div class="login-tit">
+    
+<ul>
+    <li><span class="login-user2"></span>
+    <asp:TextBox ID="txtUserName" runat="server" class="login-user"   placeholder="请输入账号" MaxLength="100"   tabindex="1" ></asp:TextBox>
+ </li>
+     <li><span class="login-pwd3"></span>
+
+     <asp:TextBox ID="txtPassword" runat="server" MaxLength="14" class="login-pwd" TextMode="Password"   TabIndex="1" placeholder="密码"></asp:TextBox>
+ </li>
+<li>
+<asp:TextBox ID="Txtcode" runat="server" MaxLength="5" class="login-pwd2 fl" TabIndex="2" style="width: 80px;" type="text"   placeholder="验证码"></asp:TextBox>
+
+ <div class="fr">
+
+   <asp:Image ID="Img" runat="server" width="70" height="40"  ImageUrl="~/img.aspx" style="cursor: pointer;"  onclick="this.src=this.src+'?'"/>
+ 
+ </div></li>
+
+<li> 
+                  <asp:ImageButton ID="ibtnLogin"   runat="server"      
+                      border="0" ToolTip="立即登录" ImageUrl="~/Template/muban4/images/00.png" style="width:255px; height:60px"   />           <br>
+                          
+  
+ 
+  </li>
+
+</ul>
+
+
+</div>
+    </div>
+
+
+    </div>
+
+    </div>    </div>
+
+
+<div class="loginbm"> Copyright ©2006-2016,All Rights Reserved.</div>
+
+
+
+</form>
+</body>
+
+</html>
+

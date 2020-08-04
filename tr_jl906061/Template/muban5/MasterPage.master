@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Template_muban5_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<HTML><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+ <LINK href="/favicon.ico" rel="shortcut icon" type="image/x-icon"> 
+<META http-equiv="Content-Type" content="text/html; charset=gb2312">  
+<META http-equiv="X-UA-Compatible" content="IE=edge"> <TITLE><%=title%></TITLE> 
+<META name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"> 
+<LINK href="Template/muban5/images/cf.css" rel="stylesheet" media="screen,projection" 
+charset="utf-8"> 
+<STYLE>
+/*.site-wrapper{background:url(http://cn.mmobar.com/login_theme/images/fu_01.png) repeat;}
+   @media screen and (min-width: 980px) {
+	#main {background: url(http://cn.mmobar.com/login_theme/images/map2cj.png) no-repeat 0px -15px;min-height:450px;}
+   .wrapper {margin-left: auto;margin-right: auto;width: 1200px;}*/
+
+
+@media screen and (min-width: 980px) {
+ #main {background: url(Template/muban5/images/map2.png) no-repeat 0px 0px;}
+ .wrapper {margin-left: auto;margin-right: auto;width: 1100px;}
+}
+
+
+</STYLE>
+
+<META name="GENERATOR" content="MSHTML 11.00.9600.17842"></HEAD> 
+ <form id="form1" runat="server">
+<BODY>
+   
+<DIV class="site-wrapper"><HEADER class="header" id="header">
+<DIV class="header-main" id="header-global">
+<DIV class="wrapper header-global-wrapper"><A class="logo-header logo center" 
+href="#"><%=title%></A></DIV></DIV></HEADER>
+<DIV class="no-login-wrapper">
+<DIV class="wrapper" id="main"><SECTION class="center login-form" data-cid="view48">
+<DIV class="login-container">
+ <LEGEND>
+<H3 class="form-title">登录 <%=title%></H3></LEGEND>
+<DIV class="form-controls">
+<DIV class="control-group" data-cid="view58"><LABEL class="assistive-text" 
+style="font-size: 14px;">用户名</LABEL>
+<DIV class="controls">
+    <asp:TextBox ID="txtUserName" runat="server" class="width-full user-success"   placeholder="请输入账号" MaxLength="100"  autocapitalize="none" ></asp:TextBox>
+
+
+  
+                </DIV>
+<DIV class="help-hint"></DIV></DIV>
+<DIV class="control-group" data-cid="view61"><LABEL class="assistive-text" 
+style="font-size: 14px;">登录密码</LABEL>
+<DIV 
+class="controls">
+
+ <asp:TextBox ID="txtPassword" runat="server" MaxLength="14"  class="width-full" TextMode="Password"   TabIndex="1" placeholder="密码"></asp:TextBox>
+ 
+                </DIV>
+<DIV class="help-hint"></DIV></DIV>
+<DIV class="control-group" data-cid="view61"><LABEL class="assistive-text" 
+style="font-size: 14px;">验证码</LABEL>
+<DIV 
+class="controls">
+
+
+ 
+
+<asp:TextBox ID="Txtcode" runat="server" MaxLength="5" class="width-half" TabIndex="2"  type="text"   placeholder="验证码"></asp:TextBox>
+
+
+ &nbsp;&nbsp;        
+   <asp:Image ID="Img" runat="server" width="60"   ImageUrl="~/img.aspx" style="cursor: pointer;"  onclick="this.src=this.src+'?'"/>
+ 
+  
+                </DIV>
+<DIV class="help-hint"></DIV></DIV>
+            
+<DIV class="control-group" data-cid="view67">
+<DIV class="form-actions">
+
+<asp:ImageButton ID="ibtnLogin"   runat="server"      ImageUrl="~/Template/muban5/images/1.png"
+        style="width:390px; height:60px"              border="0" AlternateText="登录"    />  
+
+                 </DIV></DIV>
+<DIV class="control-group" data-cid="view70">
+<DIV class="row"><SPAN class="pull-left"><SPAN id="siteseal" style="display:none;"><A href="#" 
+target="_blank"><IMG style="cursor: pointer;" alt="SSL site seal - click to verify" 
+src="/images/siteseal_gd_3_h_l_m.gif"></A>            
+   
+                    </SPAN></SPAN> &nbsp;&nbsp;                  
+</DIV></DIV></DIV> 
+<DIV></DIV></DIV></SECTION></DIV></DIV><FOOTER class="footer" id="footer">
+<DIV class="wrapper" style="text-align: center; font-size: 13px;">©2016 
+<%=title%> All Rights Reserved.         </DIV></FOOTER></DIV>
+<DIV id="overlays"></DIV>
+ </form>
+
+ </BODY></HTML>
+

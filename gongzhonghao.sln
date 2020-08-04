@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "tr_jl906061", "tr_jl906061\", "{93A88FC0-05A1-4C2A-86D5-4B4AF0A3FECD}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{495F9285-BF26-48D0-BEE5-E6C0DA84E443}|Common.dll;{72457011-0A16-4159-9D3D-B5B25D6B8429}|WechatService.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/tr_jl906061"
+		Debug.AspNetCompiler.PhysicalPath = "tr_jl906061\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\tr_jl906061\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/tr_jl906061"
+		Release.AspNetCompiler.PhysicalPath = "tr_jl906061\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\tr_jl906061\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53507"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{495F9285-BF26-48D0-BEE5-E6C0DA84E443}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WechatService", "WechatService\WechatService.csproj", "{72457011-0A16-4159-9D3D-B5B25D6B8429}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93A88FC0-05A1-4C2A-86D5-4B4AF0A3FECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93A88FC0-05A1-4C2A-86D5-4B4AF0A3FECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93A88FC0-05A1-4C2A-86D5-4B4AF0A3FECD}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{93A88FC0-05A1-4C2A-86D5-4B4AF0A3FECD}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{495F9285-BF26-48D0-BEE5-E6C0DA84E443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{495F9285-BF26-48D0-BEE5-E6C0DA84E443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{495F9285-BF26-48D0-BEE5-E6C0DA84E443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{495F9285-BF26-48D0-BEE5-E6C0DA84E443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72457011-0A16-4159-9D3D-B5B25D6B8429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72457011-0A16-4159-9D3D-B5B25D6B8429}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72457011-0A16-4159-9D3D-B5B25D6B8429}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72457011-0A16-4159-9D3D-B5B25D6B8429}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

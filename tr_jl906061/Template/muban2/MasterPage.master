@@ -1,0 +1,193 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Template_muban2_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title> <%=title%></title>
+
+ 
+    <link href="images/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        window.onload = function () { if (document.getElementById("TBUserName").value == "") { document.getElementById("TBUserName").focus(); } else { document.getElementById("TBPassWord").focus(); } }
+        //window.document.oncontextmenu = function(){return false;}
+        String.prototype.Trim = function () {
+            return this.replace(/(^\s*)|(\s*$)/g, "");
+        }
+        function $(id) { return document.getElementById(id); }
+        function btnReg_OnClick() {
+            document.getElementById('mainDiv').style.display = "";
+            document.getElementById('RegAgreement').style.display = "";
+            document.getElementById('PageOpacity').style.display = "";
+        }
+        function btnUnagree_Click() {
+            document.getElementById('mainDiv').style.display = "none";
+            document.getElementById('RegAgreement').style.display = "none";
+            document.getElementById('PageOpacity').style.display = "none";
+        }
+        function CheckText() {
+            if ($("TBUserName").value.Trim() == "") {
+                alert("账号未输入！");
+                $("TBUserName").focus();
+                $("imgCheckCode").src = $("imgCheckCode").src;
+                return false;
+            }
+            if ($("TBPassWord").value.Trim() == "") {
+                alert("会员密码未输入！");
+                $("TBPassWord").focus();
+                $("imgCheckCode").src = $("imgCheckCode").src;
+                return false;
+            }
+            if ($("TBCode").value.Trim() == "") {
+                alert("验证码未输入！");
+                $("TBCode").focus();
+                $("imgCheckCode").src = $("imgCheckCode").src;
+                return false;
+            }
+            if ($("TBCode").value.length < 4) {
+                alert("请认真检查验证码是否输入完整！");
+                $("TBCode").focus();
+                $("imgCheckCode").src = $("imgCheckCode").src;
+                return false;
+            }
+
+            return true;
+        }
+        /*      
+        function showThis(){
+        if($("#btn").text()=="English"){
+        //$("#sp_login").text("USER LOGIN");
+        $("#btn").text("Chinese");
+        $("#sp_name").text("Username");
+        $("#sp_pwd").text("Password");
+        $("#sp_code").text("Authcode");
+        //$("#udPwd").text("forget password?");
+        $("#ibtnLogin_En").show();
+        $("#ibtnLogin").hide();
+        $(document.body).css("background", "url(App_Themes/Blue/images/login_En.jpg) no-repeat center top").css("width","1002px").css(" margin","0 auto").css("background-color","#08377d");
+           
+        }else{
+        //$("#sp_login").text("会员登录");
+        $("#btn").text("English");
+        $("#sp_name").text("授权账号");
+        $("#sp_pwd").text("登录密码");
+        $("#sp_code").text("验 证 码");
+        //$("#udPwd").text("忘记密码？");
+           
+        $("#ibtnLogin_En").hide();
+        $("#ibtnLogin").show();
+        $(document.body).css("background", "url(App_Themes/Blue/images/login1.jpg) no-repeat center top").css("width","1002px").css(" margin","0 auto").css("background-color","#08377d");
+        }
+        }        
+        function thisHide(){
+        $("#ibtnLogin_En").hide();
+        
+        }
+        */
+    </script>
+
+    <style type="text/css">
+        .style1
+        {
+            width: 383px;
+        }
+        .style2
+        {
+            width: 566px;
+        }
+        #Layer2 {
+	Z-INDEX: 1; LEFT: 100px; WIDTH: 399px; POSITION: absolute; TOP: 156px; HEIGHT: 500px
+}
+       #logo_title { z-index:1; position:absolute; top:480px; height:120px; width:500px; left:70px}
+      
+    </style>
+
+</head>
+ 
+<body class="login" >
+    
+ 
+    <form id="form1" runat="server">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <%--<tr>
+            <td class="login_01" align="center" valign="bottom">&nbsp;
+                <table width="520" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                <td align="left" class="login_03">
+                会员登录
+                </td>
+                <td></td>
+                </tr>
+                </table>
+            </td>
+        </tr> --%>
+        <tr>
+            <td align="center">
+                <table width="440" border="0" cellspacing="0" cellpadding="0" class="login_02" style="margin-top:220px; margin-left:470px;">
+                    <tr>
+                        <td align="right" class="style2">
+                        <span id="sp_name">会员账号</span>：
+                        </td>
+                        <td align="left" class="style1">
+                            <asp:TextBox ID="txtUserName" runat="server" MaxLength="14" CssClass="inputStyle" Width="122"
+                                TabIndex="1"></asp:TextBox>
+                        </td>
+                        <td rowspan="2" align="left">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" class="style2">
+                         <span id="sp_pwd">会员密码</span>：
+                        </td>
+                        <td align="left" class="style1">
+                            <asp:TextBox ID="txtPassword" runat="server" MaxLength="14" CssClass="inputStyle" TextMode="Password"
+                                Width="122" TabIndex="2"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" class="style2">
+                       <span id="sp_code"> 验&nbsp;证&nbsp;码</span>：
+                        </td>
+                        <td align="left" class="style1">
+                            <asp:TextBox ID="Txtcode" runat="server" MaxLength="5" CssClass="inputStyle" TabIndex="3" Width="60"></asp:TextBox>
+
+                            <asp:Image ID="Img" runat="server" ImageAlign="AbsBottom" ImageUrl="~/img.aspx" width="58" height="22" onclick="this.src=this.src+'?'"/>
+                          
+                        </td>
+                        <td align="left">
+                            <span class="f12px">&nbsp; </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style2">
+                            &nbsp;
+                        </td>
+                        <td align="left" class="style1">
+                        <asp:ImageButton ID="ibtnLogin" runat="server" ImageUrl="~/Template/muban2/images/bottom.gif"
+                                 OnClientClick="return CheckText()" TabIndex="4" />
+                       <%--   <asp:ImageButton ID="ibtnLogin_En" runat="server" ImageUrl="~/App_Themes/Blue/images/bottom_En.gif"
+                                OnClick="ibtnLogin_En_Click" OnClientClick="return CheckText()" TabIndex="4" />   
+                                &nbsp;
+                               <a href="javascript:showThis();" style="text-decoration: underline" id="btn" class="f16px fB">English</a>   
+                            <a href="Login1.aspx" style="text-decoration: underline">忘记密码？</a>--%>  
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                      
+                      <td align="left" style=" font-weight:bold; padding-top:15px;" colspan="2">
+                       <%-- <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/App_Themes/Blue/images/yqlj.jpg"  OnClick="btn_Click1"  TabIndex="4" />--%>
+                          &nbsp;<%-- <br />
+                       &nbsp;&nbsp; 如果您还不是我们会员，请点击<a href="Register.aspx"><span style="color:red"> 我要申请</span></a>
+                      <br />--%></td>
+                      <td></td>
+                  </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

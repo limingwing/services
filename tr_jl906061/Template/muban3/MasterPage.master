@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Template_muban2_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title> <%=title%></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes"  />
+ 
+   <LINK href="favicon.ico" rel="icon" type="image/x-icon">
+   <LINK href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+   <LINK href="favicon.ico" rel="Bookmark" type="image/x-icon">
+   <LINK href="images/common.css" rel="stylesheet" type="text/css">
+    
+    
+
+</head>
+ 
+<BODY>
+<DIV class="page_bg_slide_plate" id="BgimgSlidePlayer"><IMG src="Template/muban3/images/bg01.jpg"> 
+</DIV>
+<DIV class="clear"></DIV>
+<DIV class="login_main_area login_main_plate"><%--<IMG class="login_logo" src="Template/muban3/images/login_logo.png">--%>
+<H2>  <%=title%></H2>
+<DIV class="clear" style="height: 20px;"></DIV>
+<DIV class="login_form_plate">
+<H1>系统登录</H1>
+<DIV class="login_form_response_error_plate" id="ErrorBoard"></DIV>
+    <form id="form1" runat="server">
+        输入注册时手机号<asp:TextBox ID="txtUserName" runat="server" class="text input_0 input_one_line"  placeholder="用户名" MaxLength="100"   tabindex="1" ></asp:TextBox>
+
+        密码
+         <asp:TextBox ID="txtPassword" runat="server" MaxLength="14" class="text input_0 input_one_line" TextMode="Password"   TabIndex="1" placeholder="密码"></asp:TextBox>
+         
+        验证码<BR>
+         <asp:TextBox ID="Txtcode" runat="server" MaxLength="5" class="text input_0 ipt_text" TabIndex="2" style="width: 80px;" type="text"   placeholder="验证码"></asp:TextBox>
+     
+ &nbsp;&nbsp; 
+ 
+   <asp:Image ID="Img" runat="server"  ImageUrl="~/img.aspx"   width="60" onclick="this.src=this.src+'?'"/>
+ 
+  &nbsp; 点击图片刷新验证码 
+ <DIV class="clear" style="height: 20px;"></DIV>
+ 
+ 
+     <asp:ImageButton ID="ibtnLogin" runat="server" ImageUrl="~/Template/muban3/images/login.png" border="0"  />
+      <INPUT class="button_0 button_0_gray input_one_line" onClick="document.location.href='get_pass.aspx';" type="button" value="忘记密码"> 
+
+
+
+<%--<INPUT class="button_0 button_0_gray input_one_line" onClick="document.location.href='search/FindPass.aspx';" type="button" value="忘记密码">--%>
+    </FORM>
+
+</DIV>
+<DIV class="login_copyright_plate"> <%-- LCF 2015  all rights reserved. --%>   
+</DIV></DIV>
+
+
+
+
+
+<DIV class="clear"></DIV>
+
+
+
+
+</BODY>
+</html>

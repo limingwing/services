@@ -1,0 +1,31 @@
+﻿/*===========login 登录===============*/
+.login{ width:1002px; margin:0 auto;background:url(../Images/111.jpg) no-repeat center top; background-color:#548fe8}
+.login_bg{ background:url(../Images/login_bg.jpg) repeat-x left top; background-color:#089EFD;}
+
+.input{ width:170px; height:20px; line-height:20px;}
+.inputCode{ width:70px; height:20px; line-height:20px;}
+
+.login_01{ height:230px;overflow:hidden;}
+.login_02 td{ height:28px; line-height:26px; color:#000; font-size:14px;}
+.login_03{ border-bottom:2px solid #000; width:380px; font-size:24px; font-weight:bold; line-height:30px;}
+.login_btn{ width:96px; height:30px; line-height:30px; text-align:center; background:url(../Images/buttom.jpg) no-repeat left bottom; border:none; margin-top:5px;}
+
+
+/*==========topframeset 头部================*/
+.m_top{ height:76px; width:1024px;}
+.logo { background:url(../Images/logo.gif) no-repeat left top; height:73px; width:330px;}
+.top_r11{height:78px; width:300px;}
+
+/*==========mian================*/
+.bgc{ background:#7E7E7E;}
+.bg_main{ background:url(../Images/bg_main.jpg) repeat-x left top; padding-top:40px;}
+
+.mleft{ width:272px; padding:0px 0px 10px 10px;}
+.mbg_login{ background: url(../Images/bg_login.jpg) no-repeat left top; height:200px; padding:45px 20px 20px 24px;}
+.mright{}
+.jj{ padding-top:55px; padding-bottom:48px;}
+
+
+/*==========底部================*/
+.bt_bc{ background:#FEF5CA;height:7px; overflow:hidden; padding:0px;}
+.bt_bg{ background:url(../Images/bottom.jpg) no-repeat left top; height:7px; padding:0px;}
